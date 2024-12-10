@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario con JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #d7edd0;
+      margin: 0;
+      padding: 0;
+    }
+    .contenedor {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+    .contenedor-formulario {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0px 0px 10px rgba(74, 203, 57, 0.1);
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 0;
+    }
+    .grupo-formulario {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 95%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="button"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .contenedor-resultado {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    .imagen {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .imagen img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="contenedor-formulario">
+      <h2>ENCUESTA UNIVERSITARIA</h2>
+      <div class="imagen">
+        <img src="img/foto1.png" alt="Imagen del formulario">
+      </div>
+      <form id="miFormulario">
+        <div class="grupo-formulario">
+          <label for="nombre">Nombre Completo:</label>
+          <input type="text" id="nombre" name="nombre">
+        </div>
+        <div class="grupo-formulario">
+          <label for="edad">Edad:</label>
+          <input type="number" id="edad" name="edad">
+        </div>
+        <div class="grupo-formulario">
+          <label for="genero">Género:</label>
+          <select id="genero" name="genero">
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div class="grupo-formulario">
+          <label for="universidad">Universidad:</label>
+          <input type="text" id="universidad" name="universidad">
+        </div>
+        <div class="grupo-formulario">
+          <label for="carrera">Carrera:</label>
+          <input type="text" id="carrera" name="carrera">
+        </div>
+        <div class="grupo-formulario">
+          <label for="semestre">Semestre:</label>
+          <input type="number" id="semestre" name="semestre">
+        </div>
+        <div class="grupo-formulario">
+          <label for="materia">Materia Favorita:</label>
+          <input type="text" id="materia" name="materia">
+        </div>
+        <div class="grupo-formulario">
+          <label for="trabaja">¿Trabaja actualmente?</label>
+          <select id="trabaja" name="trabaja">
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <input type="button" value="Enviar" id="botonEnviar">
+      </form>
+    </div>
+
+    <div id="resultado" class="contenedor-resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
